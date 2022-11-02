@@ -127,13 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="1.cpp" />
-    <ClCompile Include="buffer.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Student.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="buffer.h" />
     <ClInclude Include="library.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Student.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="1.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
