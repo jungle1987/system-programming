@@ -8,6 +8,8 @@
 #include <ios>
 #include <stdio.h>
 #include <stdlib.h>
+#include <fstream>
+#include <sstream> 
 
 
 using std::cout;
@@ -20,6 +22,10 @@ using std::setw;
 using std::setprecision;
 using std::fixed;
 using std::showpoint;
+using std::stringstream;
+using std::ofstream;
+using std::ifstream;
+using std::istream_iterator;
 
 
 
