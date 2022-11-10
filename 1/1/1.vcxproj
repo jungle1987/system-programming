@@ -139,7 +139,9 @@
     <ResourceCompile Include="1.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="kursiokai.txt" />
+    <Text Include="kursiokai10000.txt" />
+    <Text Include="kursiokai100000.txt" />
+    <Text Include="kursiokai1000000.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
