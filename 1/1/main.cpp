@@ -5,71 +5,115 @@
 
 int main()
 {
-	int data_input_option;
-	vector<Student> list_Students;//vetorius talpins student objektus i sar
+	
+	list<Student> list_Students;//vektorius talpins student objektus i list_students
 	vector<int>score_container;
 	string eil;
-
+	int generate_data_size = 0;
 	Student Temp_data;//perduodu i inputa
 	// nuolat pildomas list_students objektas
-	
 
 
-	
-	cout << "Pasirinkite duomenu ivedimo buda" << endl;
-	cout << "1 Opcija: Duomenu suvedimas rankiniu budu. Vartotojas suveda duomenis rankiniu budu. " << endl;
-	cout << "2 Opcija: Duomenu suvedimas is failo. Vartotojas ikelia faila " << endl;
-	cout << "Opcija: ";
-	cin >> data_input_option;
+	cout << "-------------------------------SVARBU!--------------------------------------------" << endl;
+	cout << "- Isskleiskite kursiokai1000000.zip faila kuris yra direktorijoje '../1/1/kursiokai1000000.zip'" << endl;
+	cout << "- Programoje failas turi buti isskleistas tiesiai i direktorija kur yra programa" << endl;
+	cout << "- t.y.po isskleidimo, failas turi atsirasti direktorijoje'../1/1/kursiokai1000000.txt' " << endl;
+	cout << "----------------------------------------------------------------------------------" << endl;
 	cout << endl;
-	if (data_input_option == 1) {
-		for (int i = 0; i < 2; i++) {
-			cout << endl;
-			cout << "**************************************************************************************************" << endl;
-			cout << "** 1. Iveskite savo varda. " << endl;
-			cout << "** 2. Iveskite savo pavarde. " << endl;
-			cout << "** 3. Iveskite pazymius. " << endl;
-			cout << "** 4. Iveskite savo egzamino rezultata. " << endl;
-			cout << "**************************************************************************************************" << endl;
-			cout << endl;
-			cin >> Temp_data;
-			list_Students.push_back(Temp_data);
-			Temp_data.deleteStudentScores();
-
-		};
-	}
-
+	cout << "Pasirinkite duomenu generavimo dydi: " << endl;
+	cout  << "Opcija 1: Programa sugeneruos 1000 studentu sarasus su atstiktiniais skaiciais." << endl;
+	cout  << "Opcija 2: Programa sugeneruos 10 000 studentu sarasus su atstiktiniais skaiciais." << endl;
+	cout  << "Opcija 3: Programa sugeneruos 100 000 studentu sarasus su atstiktiniais skaiciais. "  << endl;
+	cout  << "Opcija 4: Programa sugeneruos 1 000 000 studentu sarasus su atstiktiniais skaiciais. "  << endl;
 	
+	cout << endl;
+
+	cout << "Opcija: ";
+	cin >> generate_data_size;
 	
-	else if (data_input_option == 2) {
-		std::ifstream open_f("kursiokai.txt");
-		getline(open_f, eil);
-		while (!open_f.eof()) {
+	ifstream open_f("kursiokai1000000.txt");
+	getline(open_f, eil);
+	
+	if (generate_data_size == 1) {
+		auto start = std::chrono::high_resolution_clock::now(); auto st = start;//skaiciuoja laika atliekamos operacijos	
+		for (int i = 0; i < 1000; i++) {
 			open_f >> Temp_data;
-
 			list_Students.push_back(Temp_data);
-			list_Students.begin()->getVardas();
+			
 			Temp_data.deleteStudentScores();
 		}
+		open_f.close();
+		std::chrono::duration<double> diff = std::chrono::high_resolution_clock::now() - start; // Skirtumas (s)
+		cout << "Failo duomenu apdorojimas uztruko: " << diff.count() << " s\n";
+	}
+	
+
+
+	if (generate_data_size == 2) {
+		auto start = std::chrono::high_resolution_clock::now(); auto st = start;//skaiciuoja laika atliekamos operacijos
+		for (int i = 0; i < 10000; i++) {
+			open_f >> Temp_data;
+			list_Students.push_back(Temp_data);
+
+			Temp_data.deleteStudentScores();
+		}
+		open_f.close();
+		std::chrono::duration<double> diff = std::chrono::high_resolution_clock::now() - start; // Skirtumas (s)
+		cout << "Failo duomenu nukaitymas ir apdorojimas uztruko: " << diff.count() << " s\n";
 	}
 
-	
+	else if (generate_data_size == 3) {
+		auto start = std::chrono::high_resolution_clock::now(); auto st = start;//skaiciuoja laika atliekamos operacijos
+		for (int i = 0; i < 100000; i++) {
+			open_f >> Temp_data;
+			list_Students.push_back(Temp_data);
 
-		cout  << setw(15) << left << "Pavarde" << setw(15) << "Vardas" << setw(15) << "Galutinis(Vid.) / Galutinis (Med.)" << endl;
-		cout << "--------------------------------------------------" << endl;
-		//cout << list_Students.size() << endl;
+			Temp_data.deleteStudentScores();
+		}
+		open_f.close();
+		std::chrono::duration<double> diff = std::chrono::high_resolution_clock::now() - start; // Skirtumas (s)
+		cout << "Failo duomenu nukaitymas ir apdorojimas uztruko: " << diff.count() << " s\n";
+	}
+
+	else if (generate_data_size == 4) {
+		auto start = std::chrono::high_resolution_clock::now(); auto st = start;//skaiciuoja laika atliekamos operacijos
+		for (int i = 0; i < 1000000; i++) {
+			open_f >> Temp_data;
+			list_Students.push_back(Temp_data);
+			
+			Temp_data.deleteStudentScores();
+		}
+		open_f.close();
+		std::chrono::duration<double> diff = std::chrono::high_resolution_clock::now() - start; // Skirtumas (s)
+		cout << "Failo duomenu nukaitymas ir apdorojimas uztruko: " << diff.count() << " s\n";
+	}
 		
-		for (auto &a : list_Students) {
-			cout << a;
-		};
+		ofstream out_f("kursiokai_grades.txt");
+		auto start = std::chrono::high_resolution_clock::now(); auto st = start;//skaiciuoja laika atliekamos operacijos
+			for (int i = 0; i < list_Students.size(); i++) {
+				out_f << list_Students.front();
+				
+			}
+			std::chrono::duration<double> diff = std::chrono::high_resolution_clock::now() - start; // Skirtumas (s)
+			out_f.close();
+
+	
+	cout << "Apdorotu duomenu irasymas i nauja faila uztruko: " << diff.count() << " s\n";
+	cout << "Programa sugeneravo " << list_Students.size() << " eiluciu kieki " << endl;
+	
+	
+
 
 	
 
 	
+	
+
+
+
 
 	return 0;
 
-	// system("pause");
 
 
 }

@@ -1,0 +1,76 @@
+1 000 000 eiluciu
+--------------------------------------------------------
+vectorius  
+test 1
+Failo duomenu nukaitymas ir apdorojimas uztruko: 47.3206 s
+Apdorotu duomenu irasymas i nauja faila uztruko: 23.4715 s
+Programa sugeneravo 1000000 eiluciu kieki
+
+test 2
+Failo duomenu nukaitymas ir apdorojimas uztruko: 56.9063 s
+Apdorotu duomenu irasymas i nauja faila uztruko: 33.031 s
+Programa sugeneravo 1000000 eiluciu kieki
+
+list
+test 1
+Failo duomenu nukaitymas ir apdorojimas uztruko: 37.7581 s
+Apdorotu duomenu irasymas i nauja faila uztruko: 22.1248 s
+Programa sugeneravo 1000000 eiluciu kieki
+
+test 2
+Failo duomenu nukaitymas ir apdorojimas uztruko: 35.3502 s
+Apdorotu duomenu irasymas i nauja faila uztruko: 23.2959 s
+Programa sugeneravo 1000000 eiluciu kieki
+
+deque
+test 1
+Failo duomenu nukaitymas ir apdorojimas uztruko: 37.0522 s
+Apdorotu duomenu irasymas i nauja faila uztruko: 23.9693 s
+Programa sugeneravo 1000000 eiluciu kieki
+
+test 2
+Failo duomenu nukaitymas ir apdorojimas uztruko: 39.507 s
+Apdorotu duomenu irasymas i nauja faila uztruko: 24.3993 s
+Programa sugeneravo 1000000 eiluciu kieki
+----------------------------------------------------------
+
+
+
+1000 eiluciu
+------------------------------------------------------------
+deque
+Failo duomenu apdorojimas uztruko: 0.0964247 s
+Apdorotu duomenu irasymas i nauja faila uztruko: 0.0833037 s
+Programa sugeneravo 1000 eiluciu kieki
+
+list 
+Failo duomenu apdorojimas uztruko: 0.0524816 s
+Apdorotu duomenu irasymas i nauja faila uztruko: 0.0316935 s
+Programa sugeneravo 1000 eiluciu kieki
+
+vector
+Failo duomenu apdorojimas uztruko: 0.0505745 s
+Apdorotu duomenu irasymas i nauja faila uztruko: 0.0343117 s
+Programa sugeneravo 1000 eiluciu kieki
+----------------------------------------------------------
+
+
+
+100000 eiluciu
+-----------------------------------------------------------
+vector
+Failo duomenu nukaitymas ir apdorojimas uztruko: 4.93976 s
+Apdorotu duomenu irasymas i nauja faila uztruko: 2.64934 s
+Programa sugeneravo 100000 eiluciu kieki
+
+list
+Failo duomenu nukaitymas ir apdorojimas uztruko: 4.65223 s
+Apdorotu duomenu irasymas i nauja faila uztruko: 2.18231 s
+Programa sugeneravo 100000 eiluciu kieki
+
+deque
+Failo duomenu nukaitymas ir apdorojimas uztruko: 3.98958 s
+Apdorotu duomenu irasymas i nauja faila uztruko: 2.65578 s
+Programa sugeneravo 100000 eiluciu kieki
+----------------------------------------------------------
+

@@ -38,7 +38,4 @@
       <Filter>Source Files\Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="kursiokai.txt" />
-  </ItemGroup>
 </Project>
