@@ -10,7 +10,10 @@
 #include <stdlib.h>
 #include <fstream>
 #include <sstream> 
-
+#include <random>
+#include <chrono>
+#include <list>
+#include<deque>
 
 using std::cout;
 using std::cin;
@@ -26,7 +29,7 @@ using std::stringstream;
 using std::ofstream;
 using std::ifstream;
 using std::istream_iterator;
-
+using::std::list;
 
 
 
